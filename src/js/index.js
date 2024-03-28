@@ -6,28 +6,45 @@ async function fetchData() {
         if (!response.data) {
             throw new Error("Could not fetch resource");
         }
-        
+
         const data = response.data;
+        const categoryImgContainer = document.getElementById("categoryImages");
+        categoryImgContainer.innerHTML = ""; // Clear previous content
 
         if (data.works && data.works.length > 0) {
-            const categoryImgContainer = document.getElementById("categoryImages");
-            categoryImgContainer.innerHTML = "";
-
-            data.works.forEach((work, index) => {
+            /*alphabetic order for title and description*/
+            const sortedWorks = _.sortBy(data.works, 'title');
+            sortedWorks.forEach((work, index) => {
                 if (work.cover_edition_key) {
                     const coverEditionUrl = `https://covers.openlibrary.org/b/olid/${work.cover_edition_key}-M.jpg`;
+
+                    const bookElement = document.createElement("div");
+                    bookElement.classList.add("book");
+
+                    /*img element*/
                     const imgElement = document.createElement("img");
                     imgElement.src = coverEditionUrl;
                     imgElement.classList.add("book-cover");
-                    categoryImgContainer.appendChild(imgElement);
+                    bookElement.appendChild(imgElement);
+
+                    /*title element*/
+                    const titleElement = document.createElement("p");
+                    titleElement.textContent = work.title;
+                    bookElement.appendChild(titleElement);
+
+                    /*description element*/
+                    const descriptionElement = document.createElement("p");
+                    descriptionElement.textContent = work.description ? work.description.value : "No description available";
+                    bookElement.appendChild(descriptionElement);
+
+                    categoryImgContainer.appendChild(bookElement);
                 }
             });
         } else {
-            console.log("No results found for the category.");
+            categoryImgContainer.textContent = "No results found for the category.";
         }
     } catch (error) {
         console.error(error);
     }
 }
-/*reducing searching time*/
-document.getElementById("searchbar").addEventListener('keyup', fetchData);
+document.querySelector("button").addEventListener('click', fetchData);
