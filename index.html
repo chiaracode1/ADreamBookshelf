@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/css/stylesheet.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Meie+Script&family=Milonga&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="src/img/iconleaf.png">
+    <title>A dream bookshelf</title>
+    <meta property="og:title" content="A Dream Bookshelf">
+    <meta property="og:description" content="Search your favorite category in my bookshelf">
+    <meta property="og:image" content="https://www.pxfuel.com/it/desktop-wallpaper-fcsut">
+    <meta property="og:url" content="https://adreambookshelf.netlify.app/">
+    <meta property="og:type" content="website">
+</head>
+
+<body>
+    <div class="main">
+        <h1>A Dream Bookshelf</h1>
+    </div>
+    <div class="search-bar">
+        <input id="searchbar" placeholder="Search by category">
+    </div>
+
+    <button onclick="fetchData()">Search</button><br>
+
+    <div id="categoryImages"></div>
+
+    <!-- JavaScript -->
+    <script type="module" src="src/js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+<!-- Banner -->
+<div class="footer-banner">
+     Developed by Chiara Ceriola <a href="https://github.com/chiaracode1/ADreamBookshelf">
+        <img id="logo" src="src/img/github-logo.png" alt="https://www.flaticon.com/free-icon/github-logo_25231#">
+</div>
+</body>
+
+</html>

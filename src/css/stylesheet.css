@@ -1,0 +1,143 @@
+body {
+    background-image: url(/src/img/book-back.jpeg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.main {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-family: "Meie Script";
+    font-size: 3em;
+    color:antiquewhite;
+    -webkit-text-stroke: 1px rgba(212, 210, 210, 0.5);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.search-bar {
+    margin-top: 10em;
+    margin-bottom: 2em;
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+
+/* BOOK STYLE */
+
+#categoryImages {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    justify-content: center;
+}
+
+.book-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.book-cover {
+    max-width: 200px;
+    max-height: 300px;
+    display: block;
+    margin: 0 auto;
+}
+
+  .footer-banner {
+      background-color: #6a4b4b;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+  }
+a {
+    text-decoration: none;
+    color: white;
+}
+#logo {
+margin-top: 1px;
+margin-left: 1px;
+width: 15px;
+height: 15px;
+}
+
+/* SMARTPHONE */
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+    body {
+        background-position: center;
+        background-size: 110em;
+        background-attachment: fixed;
+    }
+
+    .main {
+        flex-direction: column;
+    }
+
+    h1 {
+            font-family: "Meie Script";
+            font-size: 3em;
+            text-align: center;
+            color: antiquewhite;
+            -webkit-text-stroke: 1px rgba(212, 210, 210, 0.5);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+    .book-cover {
+        width: calc(25.25% - 10px);
+        margin: 5px;
+    }
+
+    #categoryImages {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+
+/* TABLET */
+
+@media only screen and (min-width: 500px) and (max-width: 800px) {
+    body {
+        background-position: center;
+        background-size: 110em;
+        background-attachment: fixed;
+    }
+
+    .main {
+        flex-direction: column;
+    }
+
+h1 {
+    font-family: "Meie Script";
+    font-size: 3em;
+    text-align: center;
+    color: antiquewhite;
+    -webkit-text-stroke: 1px rgba(212, 210, 210, 0.5);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+    .book-cover {
+        width: calc(25.25% - 10px);
+        margin: 5px;
+    }
+
+    #categoryImages {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
