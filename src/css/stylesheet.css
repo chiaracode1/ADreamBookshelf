@@ -91,6 +91,11 @@ a {
     color: white;
 }
 
+p {
+    font-size: 15px;
+}
+
+
 #logo {
 margin-top: 1px;
 margin-left: 1px;
