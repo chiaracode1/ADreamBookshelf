@@ -1,4 +1,5 @@
 # ADreamBookshelf
+<a href="https://e1.pxfuel.com/desktop-wallpaper/899/324/desktop-wallpaper-12-beautiful-ipad-for-a-book-lover-literature.jpg">
 # The Project
 
 This project is the final exam of the [start2Impact](https://www.start2impact.it/) JavaScript Advanced course.
